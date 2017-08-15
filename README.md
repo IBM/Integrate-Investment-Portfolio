@@ -53,14 +53,14 @@ Once you have completed the steps outlined above, you are ready to open and walk
 
 Create a Project:
 * Click on ``+ Create Project`` or ``+ New Project`` under Recently updated projects.
-* Choose a ``Name`` and, optionally, a ``Description``. Accept the default ``DSX-Spark`` for Spark Service, ``Object Storage (Swift API)`` for Storage Type, and ``DSX-ObjectStorage`` for Target Object Storage Instance.
+* Choose a ``Name`` and, optionally, a ``Description``. Accept the default settings for other options.
 * Click ``Create``.
 
 Create Notebook:
 * In your project, click ``add notebooks``.
 * Click the tab for ``From URL`` and enter a ``Name`` and optional ``Description``.
 * In the ``Notebook URL`` box put: https://github.com/IBM/Integrate-Investment-Portfolio/blob/master/notebooks/SetupPortfolio.ipynb
-* Accept the default ``DSX-Spark`` for Spark Service and click ``Create Notebook``.
+* Click ``Create Notebook``.
 
 
 ## 5. Follow steps in the SetupPortfolio Notebook
@@ -72,6 +72,9 @@ Be sure to run the code cell one at a time, and providing the required informati
 
 ## 6. Check Investment Portfolio
 
+After you have completed all the steps in ``SetupPortfolio`` notebook, open ``CheckInvestmentPortfolio`` notebook. Use the url: https://github.com/IBM/Integrate-Investment-Portfolio/blob/master/notebooks/CheckInvestmentPortfolio.ipynb
+
+Follow the instructions to re-enter your Bluemix credentials to view your portfolio in the Investment Portfolio service and enter the Portfolio name in the next cell to view your holdings.
 
 
 # License
