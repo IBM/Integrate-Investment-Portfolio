@@ -45,7 +45,7 @@ Create the following service:
 
 ## 3. Sign up for the Data Science Experience
 
-Sign up for (IBM's Data Science Experience)[https://datascience.ibm.com/].
+Sign up for [IBM's Data Science Experience](https://datascience.ibm.com/).
 
 ## 4. Load the SetupPortfolio Notebook
 
@@ -59,7 +59,8 @@ Create a Project:
 Create Notebook:
 * In your project, click ``add notebooks``.
 * Click the tab for ``From URL`` and enter a ``Name`` and optional ``Description``.
-* In the ``Notebook URL`` box put: https://github.com/IBM/Integrate-Investment-Portfolio/blob/master/notebooks/SetupPortfolio.ipynb
+* In the ``Notebook URL`` box put:
+`` https://github.com/IBM/Integrate-Investment-Portfolio/blob/master/notebooks/SetupPortfolio.ipynb``
 * Click ``Create Notebook``.
 
 
@@ -72,7 +73,7 @@ Be sure to run the code cell one at a time, and providing the required informati
 
 ## 6. Check Investment Portfolio
 
-After you have completed all the steps in ``SetupPortfolio`` notebook, open ``CheckInvestmentPortfolio`` notebook. Use the url: https://github.com/IBM/Integrate-Investment-Portfolio/blob/master/notebooks/CheckInvestmentPortfolio.ipynb
+After you have completed all the steps in ``SetupPortfolio`` notebook, open ``CheckInvestmentPortfolio`` notebook. Use the url: ``https://github.com/IBM/Integrate-Investment-Portfolio/blob/master/notebooks/CheckInvestmentPortfolio.ipynb``
 
 Follow the instructions to re-enter your Bluemix credentials to view your portfolio in the Investment Portfolio service and enter the Portfolio name in the next cell to view your holdings.
 
