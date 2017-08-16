@@ -4,9 +4,9 @@ In this developer journey, we will integrate Investment Portfolio service with a
 
 When the reader has completed this journey, they will understand how to:
 
-* Retrieve portfolio information and positions from a user's brokerage account using Quovo API calls
+* Retrieve portfolio information and positions from a brokerage account using Quovo API calls
 * Load Investment Portfolio service with portfolio and holdings
-* Use Jupyter Notebook to run Python scripts for making the API calls
+* Use Jupyter Notebook for running Python scripts
 
 
 ## Included Components
