@@ -48,7 +48,7 @@ Follow these steps to setup and run this developer journey. The steps are descri
 Create a [Quovo account](https://www.quovo.com/pricing/).  A Sandbox account can be used to integrate the portfolio for this journey.
 
 <p align="left">
-  <img width="500" height="350" src="images\quovo_signIn_scrnshot.png">
+  <img width="600" height="400" src="images\quovo_signIn_scrnshot.png">
 </p>
 
 ## 2. Create Bluemix Investment Portfolio service
@@ -63,7 +63,7 @@ Create the following service:
 Sign up for [IBM's Data Science Experience](https://datascience.ibm.com/).
 
 <p align="left">
-  <img width="500" height="350" src="images\ibm_dsx_signup_scnshot.png">
+  <img width="600" height="400" src="images\ibm_dsx_signup_scnshot.png">
 </p>
 
 
@@ -75,12 +75,12 @@ __Create a Project:__
 * Click on ``Get Started`` in the top right corner, and then ``New Project``.
 
 <p align="left">
-  <img width="600" height="200" src="images\get_started_scrnshot.png">
+  <img width="800" height="300" src="images\get_started_scrnshot.png">
 </p>
 
 * In the 'Create new project' window, enter a ``Name`` and, optionally, a ``Description``.
 <p align="left">
-  <img width="350" height="350" src="images\create_project_scrnshot.png">
+  <img width="400" height="550" src="images\create_project_scrnshot.png">
 </p>
 
 * Click ``Create``.
@@ -89,7 +89,7 @@ __Create a Project:__
 __Create Notebook:__
 * In your project, click ``add notebooks``.
 <p align="left">
-  <img width="600" height="350" src="images\add_notebook_scrnshot.png">
+  <img width="800" height="350" src="images\add_notebook_scrnshot.png">
 </p>
 
 * Click the tab for ``From URL`` and enter a ``Name`` and optional ``Description``.
@@ -97,7 +97,7 @@ __Create Notebook:__
 `` https://github.com/IBM/Integrate-Investment-Portfolio/blob/master/notebooks/SetupPortfolio.ipynb``
 
 <p align="left">
-  <img width="600" height="350" src="images\create_notebook_scrnshot.png">
+  <img width="400" height="550" src="images\create_notebook_scrnshot.png">
 </p>
 
 
