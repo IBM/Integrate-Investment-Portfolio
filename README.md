@@ -1,11 +1,11 @@
 # Integrate an Investment Portfolio
 
-In this developer journey, we will integrate Investment Portfolio service with a user's brokerage portfolio.  The integration will use Quovo to aggregate user's portfolio account and post it to the Bluemix Investment Portfolio service. The steps to perform the integration will be done using Jupyter Notebook.  The IBM Data Science Experience can be used to run the Jupyter Notebook.
+In this developer journey, we will integrate Investment Portfolio service with a user's brokerage portfolio (e.g. e*Trade, charles schwab, Fidelity).  The integration will use Quovo to aggregate user's portfolio account and post it to the Bluemix Investment Portfolio service. The steps to perform the integration will be done using Jupyter Notebook.  The IBM Data Science Experience can be used to run the Jupyter Notebook.
 
 When the reader has completed this journey, they will understand how to:
 
 * Retrieve portfolio information and positions from a brokerage account using Quovo API calls
-* Load Investment Portfolio service with portfolio and holdings
+* Load Bluemix Investment Portfolio service with portfolio and holdings
 * Use Jupyter Notebook for running Python scripts
 
 
@@ -33,7 +33,7 @@ Follow these steps to setup and run this developer journey. The steps are descri
 
 ## 1. Create Quovo account
 
-Create a [Quovo account](https://www.quovo.com/pricing/).  A Sandbox account can be used to integrate potfolio for this journey.
+Create a [Quovo account](https://www.quovo.com/pricing/).  A Sandbox account can be used to integrate the portfolio for this journey.
 
 
 ## 2. Create Bluemix Investment Portfolio service
