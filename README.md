@@ -80,7 +80,7 @@ __Create a Project:__
 
 * In the 'Create new project' window, enter a ``Name`` and, optionally, a ``Description``.
 <p align="left">
-  <img width="400" height="550" src="images\create_project_scrnshot.png">
+  <img width="600" height="550" src="images\create_project_scrnshot.png">
 </p>
 
 * Click ``Create``.
@@ -89,7 +89,7 @@ __Create a Project:__
 __Create Notebook:__
 * In your project, click ``add notebooks``.
 <p align="left">
-  <img width="800" height="350" src="images\add_notebook_scrnshot.png">
+  <img width="800" height="300" src="images\add_notebook_scrnshot.png">
 </p>
 
 * Click the tab for ``From URL`` and enter a ``Name`` and optional ``Description``.
@@ -97,7 +97,7 @@ __Create Notebook:__
 `` https://github.com/IBM/Integrate-Investment-Portfolio/blob/master/notebooks/SetupPortfolio.ipynb``
 
 <p align="left">
-  <img width="400" height="550" src="images\create_notebook_scrnshot.png">
+  <img width="500" height="550" src="images\create_notebook_scrnshot.png">
 </p>
 
 
