@@ -63,7 +63,7 @@ Create the following service:
 Sign up for [IBM's Data Science Experience](https://datascience.ibm.com/).
 
 <p align="left">
-  <img width="600" height="400" src="images\ibm_dsx_signup_scnshot.png">
+  <img width="600" height="400" src="images\ibm_dsx_signup_scrnshot.png">
 </p>
 
 
@@ -100,23 +100,41 @@ __Create Notebook:__
   <img width="500" height="550" src="images\create_notebook_scrnshot.png">
 </p>
 
+* Click ``Create Notebook``. This should open the notebook in your IBM Data Science Experience.
 
-* Click ``Create Notebook``.
+<p align="left">
+  <img width="600" height="400" src="images\open_notebook_scrnshot.png">
+</p>
+
+## 5. Add Credentials
+
+Once the notebook opens, you will need to add: credentials for the Investment Portfolio service, your Quovo login information and your brokerage info.  
+
+In the 'Enter Credentials' cell, enter your:
+  * Quovo account information
+  * Brokerage ID - the Brokerage ID for a financial institute can be found in 'brokerage.json'
+  * Username and password associated with the brokerage account
+  * Investment Portfolio credentials
+
+<p align="left">
+  <img width="500" height="300" src="images\enter_credentials_scrnshot.png">
+</p>
+
+Once your credentials are entered, go ahead and run the cell.
+
+## 6. Walk through steps to integrate portfolio with Investment Portfolio steps
+
+You are now ready to integrate your portfolio data with Investment Portfolio.  Each step provides a description of the step and what actions the script will perform. Walk through steps by running each cell in order as it may be dependent on information retrieved in the previous step.
+
+<p align="left">
+  <img width="500" height="300" src="images\notebook_step_scrnshot.png">
+</p>
+
+The initial steps walk through steps using Quovo's Aggregation API to retrieve portfolio data from your brokerage account. Once the portfolio and its associated positions are retrieved, we load the portfolio data and associated positions as holdings into Investment Portfolio.
 
 
-## 5. Follow steps in the SetupPortfolio Notebook
 
-Once you have the ``SetupPortfolio`` notebook open, follow the steps listed to load your Investment Portfolio service.
-
-Be sure to run the code cell one at a time, and providing the required information to the script listed under __Before Running__.  This information will include Quovo account information, Bluemix service credentials and IDs that may have been created in a previous step.
-
-
-## 6. Check Investment Portfolio
-
-After you have completed all the steps in ``SetupPortfolio`` notebook, open ``CheckInvestmentPortfolio`` notebook. Use the url: ``https://github.com/IBM/Integrate-Investment-Portfolio/blob/master/notebooks/CheckInvestmentPortfolio.ipynb``
-
-Re-enter your Bluemix credentials to view your portfolio in the Investment Portfolio service and enter the Portfolio name in the next cell to view your holdings.
-
+Go ahead and integrate your portfolio with IBM's Investment Portfolio.
 
 # License
 
