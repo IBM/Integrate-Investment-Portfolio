@@ -1,0 +1,12 @@
+declared-services:
+  Investment-Portfolio:
+      label: fss-portfolio-service
+      plan: fss-portfolio-service-free-plan
+applications:
+- services:
+   - Investment-Portfolio
+  memory: 128M
+  no-route: true
+  name: Integrate-Investment-Portfolio
+  health-check-type: none
+buildpack: noop-buildpack
