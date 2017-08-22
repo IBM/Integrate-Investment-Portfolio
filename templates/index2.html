@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+    Integerate an Investment Portfolio
+  </title>
+  <link href="{{ url_for('static', filename='images/WatsonLogo.png') }}" rel="icon" type="image/png">
+  <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+  </script>
+  <script src="https://d3js.org/d3.v4.js">
+  </script>
+  </link>
+  <link href="{{ url_for('static', filename='css/new.css') }}" rel="stylesheet"> </link>
+  </link>
+</head>
+
+<body class="sandboxtwo">
+  <div class="container">
+
+    <div class="header-bar">
+      <div class="header-bar__home">
+        <div class="header-bar__home__button">
+          <strong>
+                            Integerate an Investment Portfolio &nbsp;
+                        </strong>
+        </div>
+        <div class="header-bar__new">
+          <button class="new-analysis Button secondary" aria-label="New Scenario">
+                            New Portfolio
+                        </button>
+        </div>
+      </div>
+    </div>
+    <div class="article-input">
+      <div class="article-input__hero">
+        Load your portfolio holdings into Investment Portfolio
+      </div>
+      <div class="article-input__triple">
+        <div class="article-input__portfolio">
+
+          <div class="enter-brokerage">
+            Select Brokerage  <select class="" aria-label="select brokerage">
+                          <option disabled="" selected="" value="disabled">
+                              Loading...
+                          </option>
+                      </select>
+            </div>
+          <div class="brokerage_username">
+            Enter  Username <input placeholder=" " type="text" aria-label="enter brokerage username">
+          </input>
+          </div>
+          <div class="brokerage_password">
+            Enter  Password <input placeholder=" " type="text" aria-label="enter brokerage password">
+          </input>
+        </div>
+
+          <div>
+            &nbsp;&nbsp;
+          </div>
+
+            <!--div class="article-input__run"-->
+              <button class="integrate Button" aria-label="Run Analysis">
+                                    Import Data
+                                </button>
+
+          </div>
+        </div>
+      </div>
+
+
+    <div class="process-loading tab">
+      <div class="loader">
+        <img src="{{ url_for('static', filename='images/spin.svg') }}" alt="loading">
+        </img>
+        <h2>
+                        Your analysis will be completed shortly.
+                    </h2>
+      </div>
+    </div>
+
+    <!--div class="wii-info tab">
+      <div class="wii-info__text">
+        <h1>
+                        Integrate an Investment Portfolio allows a user to store their portfolio data with IBM's Investment Portfolio
+                    </h1>
+      </div>
+
+      <div class="wii-info__tiles">
+        <h3>
+                        Services Used
+                    </h3>
+        <div class="wii-tile">
+          <div class="icon-bubble">
+            <img src="{{ url_for('static', filename='images/icons/portfolio_service.svg') }}" alt="portfolio service">
+          </div>
+          <p>
+            Investment Portfolio
+          </p>
+        </div>
+        <div class="wii-tile">
+          <div class="icon-bubble">
+            <img src="{{ url_for('static', filename='images/icons/price_and_analytics_under_stress.svg') }}" alt="price and analytics under stress">
+          </div>
+          <p>
+            Quovo
+          </p>
+        </div>
+      </div>
+    </div-->
+
+    <div class="table">
+      <div class="tab tab-one" id="tab-one">
+
+        <div class="pl-table">
+          <div class="pl-table__header">
+            <div class="tab-title title1">
+              <h3>
+                                    Projected impact on your portfolio
+                                </h3>
+            </div>
+
+          </div>
+          <div class="port-table__wrapper">
+            <div class="port-table">
+              <table class="table_attr">
+                <thead>
+                  <tr style="width: 100%">
+                    <th>
+                      Name
+                    </th>
+                    <th>
+                      Company
+                    </th>
+                    <th>
+                      Quantity
+                    </th>
+
+                  </tr>
+                </thead>
+                <!-- tfoot>
+                  <tr>
+                    <td>
+                      a
+                    </td>
+                    <td>
+                      b
+                    </td>
+                    <td>
+                      c
+                    </td>
+
+                  </tr>
+                </tfoot-->
+                <tbody>
+                  <tr>
+                    <td>
+                      a
+                    </td>
+                    <td>
+                      b
+                    </td>
+                    <td>
+                      c
+                    </td>
+
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+
+
+
+      </div>
+    </div>
+    </div>
+
+</body>
+
+</html>
+<script src="{{ url_for('static', filename='js/update.js') }}"></script>
+<script src="{{ url_for('static', filename='js/run_analysis.js') }}"></script>
+<script>
+  $(document).ready(function() {
+    //$('.tab-bead').width($('.tab-title:nth-child(1)').width() + 24);
+    updateText();
+  });
+
+  $('.new-analysis').click(function() {
+    //$('.sandboxtwo').toggleClass('analysis');
+    location.reload();
+  });
+</script>

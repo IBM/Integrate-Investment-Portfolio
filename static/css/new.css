@@ -1,0 +1,25 @@
+
+.sandboxtwo .article-input .integrate {
+  height: 40px;
+  width: auto;
+  line-height: 40px;
+  box-sizing: border-box;
+  font-size: 16px;
+  /* padding: 0px 32px;  */
+  border: 1px solid white;
+  color: #330e0e;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  background-color: white; }
+
+.table_attr {
+     width: 50%; }
+
+.date a {
+  color: #868686;
+  font-size: 16px;
+  font-weight: 400;
+}

@@ -6,7 +6,9 @@ applications:
 - services:
    - Investment-Portfolio
   memory: 128M
-  no-route: true
+  path: .
+  domain: mybluemix.net
   name: Integrate-Investment-Portfolio
-  health-check-type: none
-buildpack: noop-buildpack
+  instances: 1
+  disk_quota: 1024M
+buildpack: python_buildpack
