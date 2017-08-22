@@ -12,10 +12,30 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-
-import os
 from flask import Flask, jsonify, render_template, json, Response, request
+from dotenv import load_dotenv
 import requests, json, time, datetime
+import os
+
+#Initalize Investment Portfolio Service credentials to find on Bluemix otherwise from .env file
+if 'VCAP_SERVICES' in os.environ:
+    vcap_servicesData = json.loads(os.environ['VCAP_SERVICES'])
+    # Log the fact that we successfully found some service information.
+    print("Got vcap_servicesData\n")
+    #print(vcap_servicesData)
+    # Look for the IP service instance.
+    IP_W_username=vcap_servicesData['fss-portfolio-service'][0]['credentials']['writer']['userid']
+    IP_W_password=vcap_servicesData['fss-portfolio-service'][0]['credentials']['writer']['password']
+    IP_R_username=vcap_servicesData['fss-portfolio-service'][0]['credentials']['reader']['userid']
+    IP_R_password=vcap_servicesData['fss-portfolio-service'][0]['credentials']['reader']['password']
+    # Log the fact that we successfully found credentials
+    print("Got IP credentials\n")
+else:
+    load_dotenv(os.path.join(os.path.dirname(__file__), ".env"))
+    IP_W_username=os.environ.get("CRED_PORTFOLIO_USERID_W")
+    IP_W_password=os.environ.get("CRED_PORTFOLIO_PWD_W")
+    IP_R_username=os.environ.get("CRED_PORTFOLIO_USERID_R")
+    IP_R_password=os.environ.get("CRED_PORTFOLIO_PWD_R")
 
 
 app = Flask(__name__)
@@ -36,10 +56,10 @@ quovo_email = "raheel.zubairy@gmail.com"
 #brokerage_password = "testpass"
 
 #enter Investment Portfolio credentials
-IP_W_username="standedinstorwaytooddele"
-IP_W_password="6340e126035f85d4913ee982b0d4e986a55a90ee"
-IP_R_username="aitheirstainetiongirsell"
-IP_R_password="5231860feb85f2c6c7ce38803d14639a2f2cd8bf"
+#IP_W_username="standedinstorwaytooddele"
+#IP_W_password="6340e126035f85d4913ee982b0d4e986a55a90ee"
+#IP_R_username="aitheirstainetiongirsell"
+#IP_R_password="5231860feb85f2c6c7ce38803d14639a2f2cd8bf"
 
 #risk factors defined to be used by the application
 brokerages = [
