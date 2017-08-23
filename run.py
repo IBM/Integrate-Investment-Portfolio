@@ -28,8 +28,9 @@ if 'VCAP_SERVICES' in os.environ:
     IP_R_username=vcap_servicesData['fss-portfolio-service'][0]['credentials']['reader']['userid']
     IP_R_password=vcap_servicesData['fss-portfolio-service'][0]['credentials']['reader']['password']
 
-    quovo_username =vcap_servicesData['user-provided'][0]['credentials']['username']
-    quovo_password =vcap_servicesData['user-provided'][0]['credentials']['password']
+    #quovo_username =vcap_servicesData['user-provided'][0]['credentials']['username']
+    #quovo_password =vcap_servicesData['user-provided'][0]['credentials']['password']
+    
     # Log the fact that we successfully found credentials
     print("Got IP credentials\n")
 else:
