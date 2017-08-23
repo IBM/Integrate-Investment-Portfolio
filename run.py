@@ -22,12 +22,15 @@ if 'VCAP_SERVICES' in os.environ:
     vcap_servicesData = json.loads(os.environ['VCAP_SERVICES'])
     # Log the fact that we successfully found some service information.
     print("Got vcap_servicesData\n")
-    #print(vcap_servicesData)
     # Look for the IP service instance.
     IP_W_username=vcap_servicesData['fss-portfolio-service'][0]['credentials']['writer']['userid']
     IP_W_password=vcap_servicesData['fss-portfolio-service'][0]['credentials']['writer']['password']
     IP_R_username=vcap_servicesData['fss-portfolio-service'][0]['credentials']['reader']['userid']
     IP_R_password=vcap_servicesData['fss-portfolio-service'][0]['credentials']['reader']['password']
+
+    #quovo_username =vcap_servicesData['user-provided'][0]['credentials']['username']
+    #quovo_password =vcap_servicesData['user-provided'][0]['credentials']['password']
+    
     # Log the fact that we successfully found credentials
     print("Got IP credentials\n")
 else:
@@ -48,20 +51,8 @@ quovo_password = "Shareable!@#123"
 quovo_name = "Raheel"
 quovo_email = "raheel.zubairy@gmail.com"
 
-#enter Brokerage ID assoicated by quovo
-#brokerage_ID = 21534
 
-#enter brokerage username and password
-#brokerage_username = "testusername"
-#brokerage_password = "testpass"
-
-#enter Investment Portfolio credentials
-#IP_W_username="standedinstorwaytooddele"
-#IP_W_password="6340e126035f85d4913ee982b0d4e986a55a90ee"
-#IP_R_username="aitheirstainetiongirsell"
-#IP_R_password="5231860feb85f2c6c7ce38803d14639a2f2cd8bf"
-
-#risk factors defined to be used by the application
+#brokerages defined to be used by the application
 brokerages = [
           {'21534': 'Test Data Brokerage'}
           ]
@@ -435,7 +426,7 @@ def GetHoldings(portfolio_name):
 
 @app.route('/')
 def run():
-    return render_template('index2.html')
+    return render_template('index.html')
 
 @app.route('/api/brokeragenames',methods=['GET'])
 def api_portfolionames():
