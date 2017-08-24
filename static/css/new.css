@@ -20,6 +20,9 @@
   padding-right: 48px;
   flex-basis: 50%; }
 
+  .sandboxtwo .article-input__article .article-input__header a {
+    text-decoration: underline; }
+
 .table_attr {
      width: 50%; }
 
