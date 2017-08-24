@@ -173,7 +173,7 @@ In your project directory:
 + Access the running app in a browser at <http://0.0.0.0:8080/>
 
 <p align="left">
-  <img width="800" height="500" src="images\web_ui_scrnshot.png">
+  <img width="700" height="500" src="images\web_ui_scrnshot.png">
 </p>
 
 
