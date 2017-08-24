@@ -34,6 +34,12 @@ $('.integrate.Button').click(function(){
         } else if (formBrokerageUsername === "") {
           alert("Enter brokerage password");
           return;
+        } else if (formQuovoUsername === "") {
+          alert("Enter Quovo username");
+          return;
+        } else if (formQuovoPassword === "") {
+          alert("Enter Quovo password");
+          return;
         } else {
           console.log("process")
           $('.sandboxtwo').toggleClass('loading');

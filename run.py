@@ -62,6 +62,8 @@ def GetQuovoAccessToken(quovo_username, quovo_password):
     data = get_data.json()
     json_data = json.dumps(data)
 
+    print (json.dumps(data, indent=4, sort_keys=True))
+
     #if access token present, create 'token.json' file and assign token variable
     if 'access_token' in data:
         f = open("token.json", "w")
@@ -71,16 +73,18 @@ def GetQuovoAccessToken(quovo_username, quovo_password):
         token = data["access_token"]["token"]
         print (json.dumps(data, indent=4, sort_keys=True))
 
-    #else print status and message and get token from 'token.json'
+    #else if token name in use, get token from 'token.json'
+    elif data["message"] == "The given name is already in use." and os.path.isfile('token.json'):
+        print ("Get token from token.json")
+        with open('token.json') as data_file:
+            token_data = json.load(data_file)
+            token = token_data["access_token"]["token"]
+    #else print status and message
     else:
+        print (json.dumps(data, indent=4, sort_keys=True))
         print ("status: " + str(data["status"]))
         print ("message: " + str(data["message"]))
-
-        if os.path.isfile('token.json'):
-            print ("Get token from token.json")
-            with open('token.json') as data_file:
-                token_data = json.load(data_file)
-                token = token_data["access_token"]["token"]
+        return None
 
     print ("token: " + token)
     return token
@@ -462,34 +466,37 @@ def api_analyze():
         quovo_password = json_file["quovoPassword"]
         print("retreived data: " + str(brokerage_ID) + " | " + str(brokerage_username) + " | " + str(brokerage_password) + str(quovo_username) + " | " + str(quovo_password))
 
+        #go through steps to load Investment Portfolio service
         token = GetQuovoAccessToken(quovo_username, quovo_password)
-        user_ID = CreateGetUser(token, quovo_username)
+        if(token is not None):
+            user_ID = CreateGetUser(token, quovo_username)
+            if(user_ID is not None):
+                account_ID = CreateGetAccount(brokerage_ID, brokerage_username, brokerage_password, user_ID, token)
+                if (account_ID is not None):
+                    SyncAccount(account_ID, token)
+                    CheckSync(account_ID, token)
 
-        if(user_ID is not None):
-            account_ID = CreateGetAccount(brokerage_ID, brokerage_username, brokerage_password, user_ID, token)
-            if (account_ID is not None):
-                SyncAccount(account_ID, token)
-                CheckSync(account_ID, token)
+                    #once account is synced, get portfolios
+                    portfolios_data = GetPortfolios(account_ID, token)
 
-                #once account is synced, get portfolios
-                portfolios_data = GetPortfolios(account_ID, token)
+                    #get positions for first portfolio if multiple portfolios
+                    portfolio_ID = portfolios_data["portfolios"][0]["id"]
+                    positions_data = GetPortfolioPositions(portfolio_ID, token)
 
-                #get positions for first portfolio if multiple portfolios
-                portfolio_ID = portfolios_data["portfolios"][0]["id"]
-                positions_data = GetPortfolioPositions(portfolio_ID, token)
+                    portfolio_name = LoadPortfolio(portfolios_data)
+                    LoadHoldings(portfolio_name, positions_data)
+                    holdings_data = GetHoldings(portfolio_name)
 
-                portfolio_name = LoadPortfolio(portfolios_data)
-                LoadHoldings(portfolio_name, positions_data)
-                holdings_data = GetHoldings(portfolio_name)
+                    holdings = holdings_data["holdings"][-1]["holdings"]
 
-                holdings = holdings_data["holdings"][-1]["holdings"]
-
-                #create the output json
-                output = {"portfolio_name": portfolio_name, "holdings": holdings}
+                    #create the output json
+                    output = {"portfolio_name": portfolio_name, "holdings": holdings}
+                else:
+                    return json.dumps({'error': "Unable to retrieve Quovo Account ID"})
             else:
-                return json.dumps({'error': " Unable to retrieve Quovo Account ID"})
+                return json.dumps({'error': "Unable to retrieve Quovo User ID"})
         else:
-            return json.dumps({'error': " Unable to retrieve Quovo User ID"})
+            return json.dumps({'error': "Unable to retrieve token. Check your Quovo login information"})
 
         print (output)
 
