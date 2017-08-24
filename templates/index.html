@@ -3,7 +3,7 @@
 
 <head>
   <title>
-    Integerate an Investment Portfolio
+    Integrate an Investment Portfolio
   </title>
   <link href="{{ url_for('static', filename='images/WatsonLogo.png') }}" rel="icon" type="image/png">
   <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
@@ -23,7 +23,7 @@
       <div class="header-bar__home">
         <div class="header-bar__home__button">
           <strong>
-                            Integerate an Investment Portfolio &nbsp;
+                            Integrate an Investment Portfolio &nbsp;
                         </strong>
         </div>
         <div class="header-bar__new">
@@ -35,10 +35,13 @@
     </div>
     <div class="article-input">
       <div class="article-input__hero">
-        Load your portfolio holdings into Investment Portfolio
+        Load your portfolio holdings into the Investment Portfolio service
       </div>
       <div class="article-input__triple">
         <div class="article-input__portfolio">
+          <div class="article-input__header">
+                            Enter your Brokerage info
+          </div>
 
           <div class="enter-brokerage">
             Select Brokerage  <select class="" aria-label="select brokerage">
@@ -47,26 +50,56 @@
                           </option>
                       </select>
             </div>
+
+
+
           <div class="brokerage_username">
-            Enter  Username <input placeholder=" " type="text" aria-label="enter brokerage username">
+            Username <input placeholder=" " type="text" aria-label="enter brokerage username">
           </input>
           </div>
+
+
           <div class="brokerage_password">
-            Enter  Password <input placeholder=" " type="text" aria-label="enter brokerage password">
+            Password <input placeholder=" " type="text" aria-label="enter brokerage password">
           </input>
         </div>
 
-          <div>
-            &nbsp;&nbsp;
-          </div>
 
-            <!--div class="article-input__run"-->
-              <button class="integrate Button" aria-label="Run Analysis">
-                                    Import Data
-                                </button>
 
           </div>
+
+
+
+          <div class="article-input__article">
+              <div class="article-input__header">
+                  Enter your <a href="https://www.quovo.com/pricing/" target="_blank">Quovo account</a>
+              </div>
+
+
+
+              <div class="quovo_username">
+                Username <input placeholder=" " type="text" aria-label="enter brokerage username">
+              </input>
+              </div>
+              <div class="quovo_password">
+                Password <input placeholder=" " type="text" aria-label="enter brokerage password">
+              </input>
+            </div>
+
+              <div>
+                &nbsp;&nbsp;
+              </div>
+
+          </div>
+
+
         </div>
+
+        <div class="article-input__run"-->
+            <button class="integrate Button" aria-label="Run Analysis">
+                                  Import Data
+                              </button>
+          </div>
       </div>
 
 
@@ -79,36 +112,6 @@
                     </h2>
       </div>
     </div>
-
-    <!--div class="wii-info tab">
-      <div class="wii-info__text">
-        <h1>
-                        Integrate an Investment Portfolio allows a user to store their portfolio data with IBM's Investment Portfolio
-                    </h1>
-      </div>
-
-      <div class="wii-info__tiles">
-        <h3>
-                        Services Used
-                    </h3>
-        <div class="wii-tile">
-          <div class="icon-bubble">
-            <img src="{{ url_for('static', filename='images/icons/portfolio_service.svg') }}" alt="portfolio service">
-          </div>
-          <p>
-            Investment Portfolio
-          </p>
-        </div>
-        <div class="wii-tile">
-          <div class="icon-bubble">
-            <img src="{{ url_for('static', filename='images/icons/price_and_analytics_under_stress.svg') }}" alt="price and analytics under stress">
-          </div>
-          <p>
-            Quovo
-          </p>
-        </div>
-      </div>
-    </div-->
 
     <div class="table">
       <div class="tab tab-one" id="tab-one">
@@ -139,20 +142,6 @@
 
                   </tr>
                 </thead>
-                <!-- tfoot>
-                  <tr>
-                    <td>
-                      a
-                    </td>
-                    <td>
-                      b
-                    </td>
-                    <td>
-                      c
-                    </td>
-
-                  </tr>
-                </tfoot-->
                 <tbody>
                   <tr>
                     <td>
@@ -172,13 +161,88 @@
           </div>
         </div>
 
-
-
-
       </div>
     </div>
+
+    <div class="wii-info tab">
+      <div class="wii-info__tiles">
+        <h3>
+            Services that made this possible
+        </h3>
+        <div class="wii-tile">
+
+          <div class="icon-bubble">
+            <a href="https://console.bluemix.net/catalog/services/investment-portfolio" target="_blank">
+            <img src="{{ url_for('static', filename='images/icons/portfolio_service.svg') }}" alt="portfolio service">
+            </a>
+          </div>
+          <p>
+            Investment Portfolio
+          </p>
+
+
+        </div>
+        <div class="wii-tile">
+          <div class="icon-bubble">
+            <a href="https://console.bluemix.net/catalog/services/quovo" target="_blank">
+            <img src="{{ url_for('static', filename='images/icons/quovo_icon.png') }}" alt="price and analytics under stress">
+            </a>
+          </div>
+          <p>
+            Quovo
+          </p>
+        </div>
+        <div class="wii-tile">
+          <div class="icon-bubble">
+            <a href="https://datascience.ibm.com/" target="_blank">
+            <img src="{{ url_for('static', filename='images/icons/dsx.svg') }}" alt="price and analytics under stress">
+            </a>
+          </div>
+          <p>
+            DSX
+          </p>
+        </div>
+      </div>
+
+      <div class="wii-info__text">
+        <h3>
+          Next Steps
+        </h3>
+
+        <div class="wii-tile">
+          <a href="https://console.bluemix.net/catalog/services/portfolio-optimization" target="_blank">
+            Rebalance your portfolio
+          </a>
+          <p>
+              Rebalance an investment portfolio based on a wide range of objectives and investor preferences such as avoiding sin stocks, focusing on socially responsible investments, or limiting contribution to asset classes, all while minimizing the overall volatility with respect to a benchmark.
+          </p>
+        </div>
+
+        <div class="wii-tile">
+          <a href="https://predictive-market-stress-testing.mybluemix.net" target="_blank">
+            Stress test your portfolio
+          </a>
+          <p>
+              Project the potential impact to your portfolio based on the result of a macroeconomic shock and its resulting, correlated effects on the rest of the market.
+          </p>
+        </div>
+
+        <div class="wii-tile">
+          <a href="">
+            Build a new portfolio
+          </a>
+          <p>
+              Import a new portfolio using Quovo.
+          </p>
+        </div>
+
+      </div>
+      </div>
+
     </div>
 
+
+    </div>
 </body>
 
 </html>

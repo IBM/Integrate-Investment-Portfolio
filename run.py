@@ -28,9 +28,6 @@ if 'VCAP_SERVICES' in os.environ:
     IP_R_username=vcap_servicesData['fss-portfolio-service'][0]['credentials']['reader']['userid']
     IP_R_password=vcap_servicesData['fss-portfolio-service'][0]['credentials']['reader']['password']
 
-    #quovo_username =vcap_servicesData['user-provided'][0]['credentials']['username']
-    #quovo_password =vcap_servicesData['user-provided'][0]['credentials']['password']
-    
     # Log the fact that we successfully found credentials
     print("Got IP credentials\n")
 else:
@@ -43,21 +40,12 @@ else:
 
 app = Flask(__name__)
 
-#enter Quovo username/password
-quovo_username = "raheel.zubairy@gmail.com"
-quovo_password = "Shareable!@#123"
-
-#enter name and email of user
-quovo_name = "Raheel"
-quovo_email = "raheel.zubairy@gmail.com"
-
-
 #brokerages defined to be used by the application
 brokerages = [
           {'21534': 'Test Data Brokerage'}
           ]
 
-def GetQuovoAccessToken():
+def GetQuovoAccessToken(quovo_username, quovo_password):
     """
     Generates and returns access token using Quovo username, password
     """
@@ -98,7 +86,7 @@ def GetQuovoAccessToken():
     return token
 
 
-def CreateGetUser(token):
+def CreateGetUser(token, quovo_username):
     """
     Create user with name and email, if user exists, then retrieve the user ID
     """
@@ -112,8 +100,7 @@ def CreateGetUser(token):
         }
     data = {
         'username': "main_token",
-        'name': quovo_name,
-        'email': quovo_email
+        'name': quovo_username
         }
 
     get_data = requests.post(BASEURL, headers=headers, data=json.dumps(data))
@@ -461,9 +448,8 @@ def api_analyze():
 
         print ("got json file")
 
-
         #check all required arguments are present:
-        if not all(arg in json_file for arg in ["brokerageID","brokerageUsername", "brokeragePassword"]):
+        if not all(arg in json_file for arg in ["brokerageID","brokerageUsername","brokeragePassword","quovoUsername","quovoPassword"]):
             print("Missing arguments in post request")
             return json.dumps({"status":"Error", "messages":"Missing arguments"}), 422
 
@@ -472,10 +458,12 @@ def api_analyze():
         brokerage_ID = json_file["brokerageID"]
         brokerage_username = json_file["brokerageUsername"]
         brokerage_password = json_file["brokeragePassword"]
-        print("retreived data: " + str(brokerage_ID) + " | " + str(brokerage_username) + " | " + str(brokerage_password))
+        quovo_username = json_file["quovoUsername"]
+        quovo_password = json_file["quovoPassword"]
+        print("retreived data: " + str(brokerage_ID) + " | " + str(brokerage_username) + " | " + str(brokerage_password) + str(quovo_username) + " | " + str(quovo_password))
 
-        token = GetQuovoAccessToken()
-        user_ID = CreateGetUser(token)
+        token = GetQuovoAccessToken(quovo_username, quovo_password)
+        user_ID = CreateGetUser(token, quovo_username)
 
         if(user_ID is not None):
             account_ID = CreateGetAccount(brokerage_ID, brokerage_username, brokerage_password, user_ID, token)
