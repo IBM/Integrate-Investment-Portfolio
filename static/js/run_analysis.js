@@ -6,16 +6,20 @@ $('.integrate.Button').click(function(){
         console.log("Integrate");
         //$('.sandboxtwo').addClass('analysis');
 
-
         //retrieve user input
         var formBrokerage = $('.enter-brokerage select').find(":selected").text();
         var formBrokerageID = $('.enter-brokerage select').find(":selected").attr('brokerage-id');
         var formBrokerageUsername = $('.brokerage_username input').val();
         var formBrokeragePassword = $('.brokerage_password input').val();
 
+        var formQuovoUsername = $('.quovo_username input').val();
+        var formQuovoPassword = $('.quovo_password input').val();
+
         console.log("formBrokerage: " + formBrokerageID);
         console.log("formBrokerageUsername: " + formBrokerageUsername);
         console.log("formBrokeragePassword: " + formBrokeragePassword);
+        console.log("formQuovoUsername: " + formQuovoUsername);
+        console.log("formQuovoPassword: " + formQuovoPassword);
 
         //verify input otherwise display an informative message
         if(formBrokerage.includes('Loading...')) {
@@ -30,20 +34,26 @@ $('.integrate.Button').click(function(){
         } else if (formBrokerageUsername === "") {
           alert("Enter brokerage password");
           return;
+        } else if (formQuovoUsername === "") {
+          alert("Enter Quovo username");
+          return;
+        } else if (formQuovoPassword === "") {
+          alert("Enter Quovo password");
+          return;
         } else {
           console.log("process")
           $('.sandboxtwo').toggleClass('loading');
-          Process(formBrokerageID, formBrokerageUsername, formBrokeragePassword, function(){
+          Process(formBrokerageID, formBrokerageUsername, formBrokeragePassword, formQuovoUsername, formQuovoPassword, function(){
           });
         }
 });
 
-function Process(formBrokerageID, formBrokerageUsername, formBrokeragePassword) {
+function Process(formBrokerageID, formBrokerageUsername, formBrokeragePassword, formQuovoUsername, formQuovoPassword) {
       //process input into server to create output json
       $('.loader').addClass('active');
 
       //create json data
-      var run_data = '{' + '"brokerageID" : ' + formBrokerageID + ', ' + '"brokerageUsername" : "' + formBrokerageUsername + '", ' + '"brokeragePassword" : "' + formBrokeragePassword + '"}';
+      var run_data = '{' + '"brokerageID" : ' + formBrokerageID + ', ' + '"brokerageUsername" : "' + formBrokerageUsername + '", ' + '"brokeragePassword" : "' + formBrokeragePassword + '", ' + '"quovoUsername" : "' + formQuovoUsername + '", ' + '"quovoPassword" : "' + formQuovoPassword +'"}';
 
       console.log("run data: ");
       console.log(run_data)
@@ -61,16 +71,13 @@ function Process(formBrokerageID, formBrokerageUsername, formBrokeragePassword) 
       success: function(data) {
           console.log(data);
           $('.sandboxtwo').removeClass('loading');
-          $('.table').show();
 
           //check for error in data
           if ('error' in data) {
             alert("Error: " + data.error);
             return;
-          } else {
-            //$('.sandboxtwo').addClass('analysis');
-            //$('.loader').removeClass('active');
           }
+          $('.table').show();
 
           //update header
           var holdings_title = 'Portfolio name: ' + data.portfolio_name;
@@ -78,6 +85,7 @@ function Process(formBrokerageID, formBrokerageUsername, formBrokeragePassword) 
 
           //display holdings data
           var holdings_data = data.holdings;
+          holdings_data = sortByKey(holdings_data, 'companyName');
           var holdingsDataLength = holdings_data.length;
           console.log("Number of objects: " + holdingsDataLength);
           var tr = "";
@@ -114,6 +122,6 @@ function Process(formBrokerageID, formBrokerageUsername, formBrokeragePassword) 
 function sortByKey(array, key) {
     return array.sort(function(a, b) {
         var x = a[key]; var y = b[key];
-        return ((x > y) ? -1 : ((x < y) ? 1 : 0));
+        return ((x < y) ? -1 : ((x > y) ? 1 : 0));
     });
 }

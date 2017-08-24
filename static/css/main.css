@@ -519,7 +519,9 @@ input[type="text"], textarea, select {
   border-radius: 0;
   /* display: block;  */
   width: 100%;
-  max-width: 28.25rem;
+  /* max-width: 28.25rem;  */
+  width: 17.25rem;
+  display: block;
   height: 2rem;
   padding: .25rem 0;
   font-size: 1rem;
@@ -4035,6 +4037,7 @@ body {
     display: flex;
     background-color: #fff !important; }
     .sandboxtwo .wii-info__text {
+      text-align: center;
       -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
       -ms-flex-positive: 1;
@@ -4046,19 +4049,27 @@ body {
         font-weight: 300;
         padding-right: 24px;
         line-height: 1.15; }
+      .sandboxtwo .wii-info__text h3 {
+          padding-bottom: 25px;
+         }
+      .sandboxtwo .wii-info__text a {
+             color: #8e3131;
+            }
     .sandboxtwo .wii-info__tiles {
       -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
       -ms-flex-positive: 1;
       flex-grow: 1;
-      padding-left: 48px; }
+      padding-left: 20px;
+    /* padding-left: 48px; */ }
       .sandboxtwo .wii-info__tiles h3 {
-        font-size: 20px;
-        font-weight: 400;
-        color: #8e3131;
-        padding-bottom: 8px;
-        padding-top: 16px; }
+        /*font-size: 20px; */
+        /* font-weight: 400; */
+        /* color: #8e3131; */
+        padding-bottom: 25px;
+      /* padding-top: 16px; */ }
       .sandboxtwo .wii-info__tiles .wii-tile {
+        padding-left: 60px;
         display: -ms-flexbox;
         display: flex;
         -ms-flex-align: center;
@@ -4213,7 +4224,8 @@ body {
     padding-bottom: 24px; }
     .sandboxtwo .article-input__hero {
       font-size: 28px;
-      padding: 24px 0; }
+      padding: 24px 0;
+      padding-bottom: 45px; }
     .sandboxtwo .article-input__triple {
       display: -ms-flexbox;
       display: flex;
@@ -4223,7 +4235,7 @@ body {
     .sandboxtwo .article-input__header {
       font-size: 18px;
       font-weight: 500;
-      margin-bottom: 10px; }
+      margin-bottom: 20px; }
     .sandboxtwo .article-input__risk {
       -ms-flex-positive: 1;
       flex-grow: 1;
@@ -4234,20 +4246,25 @@ body {
         margin-top: 32px; }
     .sandboxtwo .article-input__portfolio {
       -ms-flex-positive: 1;
-      flex-grow: 1;
       padding-right: 48px;
-      -ms-flex-preferred-size: calc((100% - 216px ) / 2);
-      flex-basis: calc((100% - 216px ) / 2); }
+      /* flex-basis: calc((100% + 116px ) / 2);  */
+      flex-basis: 50%;
+
+
+      /* flex-grow: 1;  */
+      /* padding-right: 48px; */
+      /* -ms-flex-preferred-size: calc((100% - 216px ) / 2); */
+    /* flex-basis: calc((100% - 216px ) / 2);  */ }
     .sandboxtwo .article-input__run {
       -ms-flex-preferred-size: 216px;
       flex-basis: 216px;
       -ms-flex-positive: 0;
       flex-grow: 0;
-      text-align: left;
+      text-align: center;
       padding-top: 48px;
       padding-bottom: 24px;
       display: -ms-flexbox;
-      display: flex; }
+    /*display: flex; */}
       .sandboxtwo .article-input__run .Button {
       /* margin-left: auto; */}
     .sandboxtwo .article-input input, .sandboxtwo .article-input select {

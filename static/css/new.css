@@ -5,7 +5,7 @@
   line-height: 40px;
   box-sizing: border-box;
   font-size: 16px;
-  /* padding: 0px 32px;  */
+  padding: 0px 32px;
   border: 1px solid white;
   color: #330e0e;
   -webkit-user-select: none;
@@ -14,6 +14,11 @@
   user-select: none;
   cursor: pointer;
   background-color: white; }
+
+.sandboxtwo article-input__article {
+  -ms-flex-positive: 1;
+  padding-right: 48px;
+  flex-basis: 50%; }
 
 .table_attr {
      width: 50%; }
