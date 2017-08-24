@@ -4037,7 +4037,7 @@ body {
     display: flex;
     background-color: #fff !important; }
     .sandboxtwo .wii-info__text {
-      text-align: center;
+      text-align: left;
       -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
       -ms-flex-positive: 1;
@@ -4051,6 +4051,7 @@ body {
         line-height: 1.15; }
       .sandboxtwo .wii-info__text h3 {
           padding-bottom: 25px;
+          text-align: center;
          }
       .sandboxtwo .wii-info__text a {
              color: #8e3131;

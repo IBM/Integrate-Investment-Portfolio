@@ -20,6 +20,9 @@
   padding-right: 48px;
   flex-basis: 50%; }
 
+  .sandboxtwo .article-input__article .article-input__header a {
+    text-decoration: underline; }
+
 .table_attr {
      width: 50%; }
 
@@ -28,3 +31,8 @@
   font-size: 16px;
   font-weight: 400;
 }
+
+.quovo-info {
+  font-size: 15px;
+  color: #c8d2d2
+   }
