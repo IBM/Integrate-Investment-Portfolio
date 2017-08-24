@@ -1,6 +1,6 @@
 # Integrate an Investment Portfolio
 
-In this developer journey, we will integrate a user's brokerage portfolio (e.g. e*Trade, charles schwab, Fidelity) with IBM's Investment Portfolio service.  The integration will use Quovo's Aggregation API to aggregate user's portfolio account and post it to the Investment Portfolio service. The steps to perform the integration will be done using Jupyter Notebook with Python scripts. The IBM Data Science Experience provides a great place to work with notebooks, in addition to other data analytical tools and services.  In this journey, we will use IBM Data Science Experience for walking through steps in our notebook.
+In this developer journey, we will integrate a user's brokerage portfolio (e.g. e*Trade, charles schwab, Fidelity) with IBM's Investment Portfolio service.  The integration will use Quovo's Aggregation API to aggregate user's portfolio account and post it to the Investment Portfolio service. The steps to perform the integration will be done using Jupyter Notebook with Python scripts. The IBM Data Science Experience provides a great place to work with notebooks, in addition to other data analytical tools and services.  In this journey, we will use IBM Data Science Experience for walking through steps in our notebook.  In addition, the steps have been put together to create a web application that performs the integration of user's brokerage portfolio data with Investment Portfolio service.
 
 When the reader has completed this journey, they will understand how to:
 
@@ -75,7 +75,7 @@ __Create a Project:__
 * Click on ``Get Started`` in the top right corner, and then ``New Project``.
 
 <p align="left">
-  <img width="800" height="300" src="images\get_started_scrnshot.png">
+  <img width="600" height="300" src="images\get_started_scrnshot.png">
 </p>
 
 * In the 'Create new project' window, enter a ``Name`` and, optionally, a ``Description``. By signing up for the IBM Data Science Experience, an Apache Spark service and an Object Storage will be created in your Bluemix account. These services can be integrated with Notebook or Rstudio for data analysis using IBM Data Science Experience. Here, choose the default ``Spark Service`` and ``Storage Type``.
@@ -103,7 +103,7 @@ __Create Notebook:__
 * Click ``Create Notebook``. This should open the notebook in your IBM Data Science Experience.
 
 <p align="left">
-  <img width="800" height="500" src="images\open_notebook_scrnshot.png">
+  <img width="700" height="500" src="images\open_notebook_scrnshot.png">
 </p>
 
 ## 5. Add Credentials
