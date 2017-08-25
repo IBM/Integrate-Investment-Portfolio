@@ -138,7 +138,7 @@ You can run a web application using the steps from the notebook to capture portf
 
 ### Deploy to Bluemix
 
-Deploy the web application . This will create an Investment Portfolio service for you.
+Deploy the web application. This will create an Investment Portfolio service for you.
 
 [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/IBM/Integrate-Investment-Portfolio)
 
