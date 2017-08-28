@@ -49,7 +49,7 @@ Follow these steps to setup and run this developer journey. The steps are descri
 Create a [Quovo account](https://www.quovo.com/pricing/).  A Sandbox account can be used to integrate the portfolio for this journey.
 
 <p align="left">
-  <img width="600" height="400" src="images\quovo_signIn_scrnshot.png">
+  <img width="800" src="images\quovo_signIn_scrnshot.png">
 </p>
 
 ## 2. Create Investment Portfolio service
@@ -63,7 +63,7 @@ Create the following service:
 Sign up for [IBM's Data Science Experience](https://datascience.ibm.com/).
 
 <p align="left">
-  <img width="2618" height="1052" src="images\ibm_dsx_signup_scrnshot.png">
+  <img width="800"  src="images\ibm_dsx_signup_scrnshot.png">
 </p>
 
 
@@ -75,7 +75,7 @@ __Create a Project:__
 * Click on ``Get Started`` in the top right corner, and then ``New Project``.
 
 <p align="left">
-  <img width="600" height="300" src="images\get_started_scrnshot.png">
+  <img width="700" src="images\get_started_scrnshot.png">
 </p>
 
 * In the 'Create new project' window, enter a ``Name`` and, optionally, a ``Description``. By signing up for the IBM Data Science Experience, an Apache Spark service and an Object Storage will be created in your Bluemix account. These services can be integrated with Notebook or Rstudio for data analysis using IBM Data Science Experience. Here, choose the default ``Spark Service`` and ``Storage Type``.
@@ -89,7 +89,7 @@ __Create a Project:__
 __Create Notebook:__
 * After your project opens, click ``add notebooks``.
 <p align="left">
-  <img width="800" height="300" src="images\add_notebook_scrnshot.png">
+  <img width="1000"  src="images\add_notebook_scrnshot.png">
 </p>
 
 * With IBM Data Science Experience, you can start with a ``Blank`` notebook or open ``From File``. We will import the notebook from github, so will use ``From URL``.  Click the tab for ``From URL``. Enter a ``Name`` and an optional ``Description``.
@@ -103,7 +103,7 @@ __Create Notebook:__
 * Click ``Create Notebook``. This should open the notebook in your IBM Data Science Experience.
 
 <p align="left">
-  <img width="700" height="500" src="images\open_notebook_scrnshot.png">
+  <img width="1000"  src="images\open_notebook_scrnshot.png">
 </p>
 
 ## 5. Add Credentials
@@ -117,7 +117,7 @@ In the 'Enter Credentials' cell, enter your:
   * Investment Portfolio credentials
 
 <p align="left">
-  <img width="2030" height="822" src="images\enter_credentials_scrnshot.png">
+  <img width="700"  src="images\enter_credentials_scrnshot.png">
 </p>
 
 Once your credentials are entered, go ahead and run the cell.
@@ -127,7 +127,7 @@ Once your credentials are entered, go ahead and run the cell.
 You are now ready to integrate your portfolio data with Investment Portfolio. Each step provides a description of the step and what actions the script will perform. Walk through steps by running each cell in order, as the script may be dependent on information retrieved in the previous step.
 
 <p align="left">
-  <img width="2646" height="922" src="images\notebook_step_scrnshot.png">
+  <img width="1000"  src="images\notebook_step_scrnshot.png">
 </p>
 
 The initial steps use Quovo's Aggregation API to retrieve portfolio data from your brokerage account. Once the portfolio and its associated positions are retrieved, we load the portfolio data and associated positions as holdings into Investment Portfolio.
@@ -173,7 +173,7 @@ In your project directory:
 + Access the running app in a browser at <http://0.0.0.0:8080/>
 
 <p align="left">
-  <img width="700" height="500" src="images\web_ui_scrnshot.png">
+  <img width="1000"  src="images\web_ui_scrnshot.png">
 </p>
 
 
