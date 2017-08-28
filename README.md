@@ -49,7 +49,7 @@ Follow these steps to setup and run this developer journey. The steps are descri
 Create a [Quovo account](https://www.quovo.com/pricing/).  A Sandbox account can be used to integrate the portfolio for this journey.
 
 <p align="left">
-  <img width="800" src="images\quovo_signIn_scrnshot.png">
+  <img width="650" src="images\quovo_signIn_scrnshot.png">
 </p>
 
 ## 2. Create Investment Portfolio service
@@ -63,7 +63,7 @@ Create the following service:
 Sign up for [IBM's Data Science Experience](https://datascience.ibm.com/).
 
 <p align="left">
-  <img width="800"  src="images\ibm_dsx_signup_scrnshot.png">
+  <img width="1000"  src="images\ibm_dsx_signup_scrnshot.png">
 </p>
 
 
@@ -75,12 +75,12 @@ __Create a Project:__
 * Click on ``Get Started`` in the top right corner, and then ``New Project``.
 
 <p align="left">
-  <img width="700" src="images\get_started_scrnshot.png">
+  <img width="1000" src="images\get_started_scrnshot.png">
 </p>
 
 * In the 'Create new project' window, enter a ``Name`` and, optionally, a ``Description``. By signing up for the IBM Data Science Experience, an Apache Spark service and an Object Storage will be created in your Bluemix account. These services can be integrated with Notebook or Rstudio for data analysis using IBM Data Science Experience. Here, choose the default ``Spark Service`` and ``Storage Type``.
 <p align="left">
-  <img width="600" height="550" src="images\create_project_scrnshot.png">
+  <img width="600" src="images\create_project_scrnshot.png">
 </p>
 
 * Click ``Create``.
@@ -97,7 +97,7 @@ __Create Notebook:__
 `` https://github.com/IBM/Integrate-Investment-Portfolio/blob/master/notebooks/SetupPortfolio.ipynb``
 
 <p align="left">
-  <img width="500" height="550" src="images\create_notebook_scrnshot.png">
+  <img width="500"  src="images\create_notebook_scrnshot.png">
 </p>
 
 * Click ``Create Notebook``. This should open the notebook in your IBM Data Science Experience.
@@ -117,7 +117,7 @@ In the 'Enter Credentials' cell, enter your:
   * Investment Portfolio credentials
 
 <p align="left">
-  <img width="700"  src="images\enter_credentials_scrnshot.png">
+  <img width="850"  src="images\enter_credentials_scrnshot.png">
 </p>
 
 Once your credentials are entered, go ahead and run the cell.
