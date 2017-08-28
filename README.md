@@ -63,7 +63,7 @@ Create the following service:
 Sign up for [IBM's Data Science Experience](https://datascience.ibm.com/).
 
 <p align="left">
-  <img width="600" height="400" src="images\ibm_dsx_signup_scrnshot.png">
+  <img width="2618" height="1052" src="images\ibm_dsx_signup_scrnshot.png">
 </p>
 
 
@@ -117,7 +117,7 @@ In the 'Enter Credentials' cell, enter your:
   * Investment Portfolio credentials
 
 <p align="left">
-  <img width="700" height="400" src="images\enter_credentials_scrnshot.png">
+  <img width="2030" height="822" src="images\enter_credentials_scrnshot.png">
 </p>
 
 Once your credentials are entered, go ahead and run the cell.
@@ -127,7 +127,7 @@ Once your credentials are entered, go ahead and run the cell.
 You are now ready to integrate your portfolio data with Investment Portfolio. Each step provides a description of the step and what actions the script will perform. Walk through steps by running each cell in order, as the script may be dependent on information retrieved in the previous step.
 
 <p align="left">
-  <img width="800" height="500" src="images\notebook_step_scrnshot.png">
+  <img width="2646" height="922" src="images\notebook_step_scrnshot.png">
 </p>
 
 The initial steps use Quovo's Aggregation API to retrieve portfolio data from your brokerage account. Once the portfolio and its associated positions are retrieved, we load the portfolio data and associated positions as holdings into Investment Portfolio.
