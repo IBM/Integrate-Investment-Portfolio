@@ -144,6 +144,14 @@ Deploy the web application. This will create an Investment Portfolio service for
 
 ### Run it locally
 
+#### Clone the repo
+
+Clone the Integrate-Investment-Portfolio code locally. In a terminal, run:
+
+```none
+git clone https://github.com/IBM/Integrate-Investment-Portfolio.git
+```
+
 #### Configure .env file
 
 You can run it locally by providing your Investment Portfolio credentials in a `.env file`. Copy the sample `.env.example` file using the following command:
