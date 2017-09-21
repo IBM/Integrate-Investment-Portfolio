@@ -2,265 +2,134 @@
 <html lang="en">
 
 <head>
-  <title>
-    Integrate an Investment Portfolio
-  </title>
-  <link href="{{ url_for('static', filename='images/WatsonLogo.png') }}" rel="icon" type="image/png">
-  <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
-  </script>
-  <script src="https://d3js.org/d3.v4.js">
-  </script>
-  </link>
-  <link href="{{ url_for('static', filename='css/new.css') }}" rel="stylesheet"> </link>
-  </link>
+  <title>Integrate an Investment Portfolio</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!--<link href="{{ url_for('static', filename='images/WatsonLogo.png') }}" rel="icon" type="image/png"></link>
+  <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">  </link>-->
+  <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet"> </link>
 </head>
 
-<body class="sandboxtwo">
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Investment Portfolio</a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li id="home"><a href=""><span class="glyphicon glyphicon-home"></span> Home</a></li>
+      </ul>
+    </div>
+  </nav>
   <div class="container">
-
-    <div class="header-bar">
-      <div class="header-bar__home">
-        <div class="header-bar__home__button">
-          <strong>
-                            Integrate an Investment Portfolio &nbsp;
-                        </strong>
-        </div>
-        <div class="header-bar__new">
-          <button class="new-analysis Button secondary" aria-label="New Scenario">
-                            New Portfolio
-                        </button>
-        </div>
+    <div id="section_one">
+      <br>
+      <center> <h2>Integrate and Analyze your Investment Portfolio</h2></center>
+      <br><br>
+      <h3 onclick="loadPortfolio()"><a href="#">Load your Portfolio Holdings into the Investment Portfolio Server</a></h3>
+      <br>
+      <h3 onclick="loadAccern()"><a href="#">Use Accern to Retrieve Investment Related News Articles</a></h3>
+      <br><br>
+      <div style="width: 50%; float:left">
+          <center><h3>Services that made this possible</h3>
+            <a href="https://console.bluemix.net/catalog/services/investment-portfolio" target="_blank" style="color:brown">
+                <img src="../static/images/icons/portfolio_service.svg" alt="portfolio service" width="50" height="50">
+            </a> <p>Investment Portfolio</p>
+            <a href="https://console.bluemix.net/catalog/services/quovo" target="_blank" style="color:brown">
+                <img src="../static/images/icons/quovo_icon.png" alt="price and analytics under stress" width="50" height="50">
+            </a> <p>Quovo</p>
+            <a href="https://datascience.ibm.com/" target="_blank" style="color: brown">
+                <img src="../static/images/icons/dsx.svg" alt="portfolio service" width="50" height="50">
+            </a> <p>DSX</p>
+            <a href="https://www.accern.com/" target="_blank" style="color: brown">
+                <img src="../static/images/icons/accern_icon.png" alt="Accern service" width="50" height="50">
+            </a> <p>Accern</p>
+          </center>
+      </div>
+      <div style="width: 50%; float:right">
+         <center><h3>What you can do next</h3></center>
+         <br>
+         <a href="https://console.bluemix.net/catalog/services/portfolio-optimization" target="_blank" style="color: brown">Rebalance your portfolio</a>
+         <p>Rebalance an investment portfolio based on a wide range of objectives and investor preferences such as avoiding sin stocks, focusing on socially responsible investments, or limiting contribution to asset classes, all while minimizing the overall volatility with respect to a benchmark.</p>
+         <br>
+         <a href="https://predictive-market-stress-testing.mybluemix.net" target="_blank" style="color: brown">Stress test your portfolio</a>
+         <p>Project the potential impact to your portfolio based on the result of a macroeconomic shock and its resulting, correlated effects on the rest of the market.</p>
+         <br>
+         <a href="" style="color:brown">Build a new portfolio</a>
+         <p>Import a new portfolio using Quovo.</p>
       </div>
     </div>
-    <div class="article-input">
-      <div class="article-input__hero">
-        Load your portfolio holdings into the Investment Portfolio service
-      </div>
-      <div class="article-input__triple">
-        <div class="article-input__portfolio">
-          <div class="article-input__header">
-                            Enter your Brokerage info
-          </div>
+    <div id="section_two">
+        &nbsp;&nbsp;
+      <center><h2> Load your portfolio holdings into the Investment Portfolio service</h2></center>
 
-          <div class="enter-brokerage">
-            Select Brokerage  <select class="" aria-label="select brokerage">
-                          <option disabled="" selected="" value="disabled">
-                              Loading...
-                          </option>
-                      </select>
-            </div>
-
-
-
-          <div class="brokerage_username">
-            Username <input placeholder="E.g. testuser" type="text" aria-label="enter brokerage username">
-          </input>
-          </div>
-
-
-          <div class="brokerage_password">
-            Password <input placeholder="E.g. testpass" type="password" aria-label="enter brokerage password">
-          </input>
-        </div>
-
-
-
-          </div>
-
-
-
-          <div class="article-input__article">
-              <div class="article-input__header">
-                  Enter your Quovo login info
-                  <div class="quovo-info">
-                  Need a log in? Visit <a href="https://www.quovo.com/signup/" target="_blank">Quovo</a>
-                </div>
-              </div>
-
-
-
-
-
-              <div class="quovo_username">
-                Username <input placeholder=" " type="text" aria-label="enter brokerage username">
-              </input>
-              </div>
-              <div class="quovo_password">
-                Password <input placeholder=" " type="password" aria-label="enter brokerage password">
-              </input>
-            </div>
-
-              <div>
-                &nbsp;&nbsp;
-              </div>
-
-          </div>
-
-
-        </div>
-
-        <div class="article-input__run"-->
-            <button class="integrate Button" aria-label="Run Analysis">
-                                  Import Data
-                              </button>
-          </div>
-      </div>
-
-
-    <div class="process-loading tab">
-      <div class="loader">
-        <img src="{{ url_for('static', filename='images/spin.svg') }}" alt="loading">
-        </img>
-        <h2>
-                        Your analysis will be completed shortly.
-                    </h2>
-      </div>
-    </div>
-
-    <div class="table">
-      <div class="tab tab-one" id="tab-one">
-
-        <div class="pl-table">
-          <div class="pl-table__header">
-            <div class="tab-title title1">
-              <h3>
-                                    Projected impact on your portfolio
-                                </h3>
-            </div>
-
-          </div>
-          <div class="port-table__wrapper">
-            <div class="port-table">
-              <table class="table_attr">
-                <thead>
-                  <tr style="width: 100%">
-                    <th>
-                      Name
-                    </th>
-                    <th>
-                      Company
-                    </th>
-                    <th>
-                      Quantity
-                    </th>
-
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>
-                      a
-                    </td>
-                    <td>
-                      b
-                    </td>
-                    <td>
-                      c
-                    </td>
-
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
+      <div style="width: 50%; float:left">
+          <h3>Enter your Brokerage info</h3><br>
+          <h4>Select Brokerage:<h4>
+          <select id="select_brokerage"></select>
+          <h4>Username:</h4>
+          <input id="brokerage_username" placeholder="E.g. testuser" type="text"></input>
+          <h4>Password:</h4>
+          <input id="brokerage_password" placeholder="E.g. testpass" type="password"></input>
 
       </div>
-    </div>
-
-    <div class="wii-info tab">
-      <div class="wii-info__tiles">
-        <h3>
-            Services that made this possible
-        </h3>
-        <div class="wii-tile">
-
-          <div class="icon-bubble">
-            <a href="https://console.bluemix.net/catalog/services/investment-portfolio" target="_blank">
-            <img src="{{ url_for('static', filename='images/icons/portfolio_service.svg') }}" alt="portfolio service">
-            </a>
-          </div>
-          <p>
-            Investment Portfolio
-          </p>
-
-
+      <div style="width: 50%; float:right">
+        <h3>Enter your Quovo login info</h3>
+        <h4>Need a log in? Visit <a href="https://www.quovo.com/signup/" target="_blank">Quovo</a></h4><br>
+        <h4>Username:</h4>
+        <input id="quovo_username" placeholder="E.g. testuser" type="text"></input>
+        <h4>Password:</h4>
+        <input id="quovo_password" placeholder="E.g. testpass" type="password"></input>
+      </div>
+      <div>
+          &nbsp;&nbsp;
+      </div>
+      <div >
+        <br><br><br>
+        <center>
+        <button onclick="loadPortfolioData()" >Import Data</button>
+        <button onclick="loadAccern()" >Load Accern</button>
+        <br><br>
+        <div id="loader_section" class="row">
+          <div class="row loader"></div>
         </div>
-        <div class="wii-tile">
-          <div class="icon-bubble">
-            <a href="https://console.bluemix.net/catalog/services/quovo" target="_blank">
-            <img src="{{ url_for('static', filename='images/icons/quovo_icon.png') }}" alt="price and analytics under stress">
-            </a>
-          </div>
-          <p>
-            Quovo
-          </p>
-        </div>
-        <div class="wii-tile">
-          <div class="icon-bubble">
-            <a href="https://datascience.ibm.com/" target="_blank">
-            <img src="{{ url_for('static', filename='images/icons/dsx.svg') }}" alt="price and analytics under stress">
-            </a>
-          </div>
-          <p>
-            DSX
-          </p>
-        </div>
+        <table id="portfolio_data">
+          <thead>
+            <tr style="width: 100%">
+              <th>Name</th>
+              <th>Company</th>
+              <th>Quantity</th>
+            </tr>
+          </thead>
+        </table>
+        </center>
       </div>
 
-      <div class="wii-info__text">
-        <h3>
-          What you can do next
-        </h3>
-
-        <div class="wii-tile">
-          <a href="https://console.bluemix.net/catalog/services/portfolio-optimization" target="_blank">
-            Rebalance your portfolio
-          </a>
-          <p>
-              Rebalance an investment portfolio based on a wide range of objectives and investor preferences such as avoiding sin stocks, focusing on socially responsible investments, or limiting contribution to asset classes, all while minimizing the overall volatility with respect to a benchmark.
-          </p>
-        </div>
-
-        <div class="wii-tile">
-          <a href="https://predictive-market-stress-testing.mybluemix.net" target="_blank">
-            Stress test your portfolio
-          </a>
-          <p>
-              Project the potential impact to your portfolio based on the result of a macroeconomic shock and its resulting, correlated effects on the rest of the market.
-          </p>
-        </div>
-
-        <div class="wii-tile">
-          <a href="">
-            Build a new portfolio
-          </a>
-          <p>
-              Import a new portfolio using Quovo.
-          </p>
-        </div>
-
+  </div>
+  <div>
+      &nbsp;&nbsp;
+  </div>
+  <div id="section_three">
+      <center><h3>  Use Accern to Retrieve Investment Related News Articles</h3></center>
+      <div style="width: 35%; float:left">
       </div>
+      <div style="width: 65%; float:right">
+        <h3>Enter your Accern login info</h3>
+        <h4>Need a log in? Visit <a href="https://app.accern.com/login/" target="_blank">Accern</a></h4><br>
+        <h4>Username:</h4>
+        <input id="accern_username" placeholder="E.g. testuser" type="text"></input>
+        <h4>Password:</h4>
+        <input id="accern_password" placeholder="E.g. testpass" type="password"></input>
+        <br><br>
+        <button onclick="">Analyze Data</button>
       </div>
-
-    </div>
-
-
-    </div>
+  </div>
+</div>
 </body>
 
 </html>
-<script src="{{ url_for('static', filename='js/update.js') }}"></script>
-<script src="{{ url_for('static', filename='js/run_analysis.js') }}"></script>
-<script>
-  $(document).ready(function() {
-    //$('.tab-bead').width($('.tab-title:nth-child(1)').width() + 24);
-    updateText();
-  });
-
-  $('.new-analysis').click(function() {
-    //$('.sandboxtwo').toggleClass('analysis');
-    location.reload();
-  });
-</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="https://d3js.org/d3.v4.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
