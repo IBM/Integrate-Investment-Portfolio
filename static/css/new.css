@@ -1,0 +1,38 @@
+
+.sandboxtwo .article-input .integrate {
+  height: 40px;
+  width: auto;
+  line-height: 40px;
+  box-sizing: border-box;
+  font-size: 16px;
+  padding: 0px 32px;
+  border: 1px solid white;
+  color: #330e0e;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  background-color: white; }
+
+.sandboxtwo article-input__article {
+  -ms-flex-positive: 1;
+  padding-right: 48px;
+  flex-basis: 50%; }
+
+  .sandboxtwo .article-input__article .article-input__header a {
+    text-decoration: underline; }
+
+.table_attr {
+     width: 50%; }
+
+.date a {
+  color: #868686;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.quovo-info {
+  font-size: 15px;
+  color: #c8d2d2
+   }
