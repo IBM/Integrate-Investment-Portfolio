@@ -1,0 +1,82 @@
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.tdcolor{
+  color: #0066ff  ;
+  font-weight: bold;
+}
+
+.vertical-alignment-helper {
+    display:table;
+    height: 100%;
+    width: 100%;
+    pointer-events:none; /* This makes sure that we can still click outside of the modal to close it */
+}
+.vertical-align-center {
+    /* To center vertically */
+    display: table-cell;
+    vertical-align: middle;
+    pointer-events:none;
+}
+.modal-content {
+    /* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */
+    width:inherit;
+    height:inherit;
+    /* To center horizontally */
+    margin: 0 auto;
+    pointer-events: all;
+}
+
+img {
+    border-radius: 50%;
+   }
+
+
+#portfolio_data {
+    border-collapse: collapse;
+    width: 60%;
+}
+#portfolio_data td, #portfolio_data th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+#portfolio_data tr:hover {background-color: #ddd;}
+#portfolio_data th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+}
+#portfolio_data caption {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    font-size:larger;
+    font-weight: bold;
+
+}
+
+
+h3 a {
+  color: brown;
+  text-decoration: none;
+}
+h3 a:hover {
+  color: grey;
+}
