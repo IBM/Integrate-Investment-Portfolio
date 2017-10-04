@@ -453,5 +453,5 @@ def api_analyze():
 port = int(os.getenv('VCAP_APP_PORT', 8080))
 host='0.0.0.0'
 if __name__ == "__main__":
-    metrics_tracker_client.track()
+	metrics_tracker_client.track()
 	app.run(host='0.0.0.0', port=int(port))
