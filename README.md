@@ -1,3 +1,5 @@
+![Bluemix Deployments](https://metrics-tracker.mybluemix.net/stats/afef6278be1bd0007fded450dc3ae2c7/badge.svg)
+
 # Integrate an Investment Portfolio
 
 In this developer journey, we will integrate a user's brokerage portfolio (e.g. e*Trade, charles schwab, Fidelity) with IBM's Investment Portfolio service.  The integration will use Quovo's Aggregation API to aggregate user's portfolio account and post it to the Investment Portfolio service. The steps to perform the integration will be done using Jupyter Notebook with Python scripts. The IBM Data Science Experience provides a great place to work with notebooks, in addition to other data analytical tools and services.  In this journey, we will use IBM Data Science Experience for walking through steps in our notebook.  In addition, the steps have been put together to create a web application that performs the integration of user's brokerage portfolio data with Investment Portfolio service.
@@ -140,7 +142,7 @@ You can run a web application using the steps from the notebook to capture portf
 
 Deploy the web application. This will create an Investment Portfolio service for you.
 
-[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/IBM/Integrate-Investment-Portfolio)
+[![Deploy to Bluemix](https://metrics-tracker.mybluemix.net/stats/afef6278be1bd0007fded450dc3ae2c7/button.svg)](https://bluemix.net/deploy?repository=https://github.com/IBM/Integrate-Investment-Portfolio)
 
 ### Run it locally
 
@@ -186,6 +188,31 @@ In your project directory:
 
 
 Go ahead and integrate your portfolio with IBM's Investment Portfolio!
+
+## Privacy Notice
+
+If using the Jupyter Notebook or the application, some metrics are tracked. The following information is sent to a [Deployment Tracker](https://github.com/IBM/metrics-collector-service) service on each deployment on Bluemix:
+
+* Python package version
+* Python repository URL
+* Application Name (`application_name`)
+* Application GUID (`application_id`)
+* Application instance index number (`instance_index`)
+* Space ID (`space_id`) or OS username
+* Application Version (`application_version`)
+* Application URIs (`application_uris`)
+* Cloud Foundry API (`cf_api`)
+* Labels of bound services
+* Number of instances for each bound service and associated plan information
+* Metadata in the repository.yaml file
+
+This data is collected from the `setup.py` and `repository.yaml` file in the sample application and the `VCAP_APPLICATION` and `VCAP_SERVICES` environment variables in IBM Bluemix and other Cloud Foundry platforms. This data is used by IBM to track metrics around deployments of sample applications to IBM Bluemix to measure the usefulness of our examples, so that we can continuously improve the content we offer to you. Only deployments of sample applications that include code to ping the Deployment Tracker service will be tracked.
+
+## Disabling Deployment Tracking
+
+To disable tracking on the Jypyter Notebook, simply remove the last 3 lines of code in the secode cell from the **SetupPortfolio.ipynb** file in the **notebooks** directory.
+
+To disable tracking on the application, simply remove `metrics_tracker_client.track()` from the run.py file in the top level directory.
 
 # License
 

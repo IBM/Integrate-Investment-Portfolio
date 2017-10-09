@@ -16,6 +16,7 @@ from flask import Flask, jsonify, render_template, json, Response, request
 from dotenv import load_dotenv
 import requests, json, time, datetime
 import os
+import metrics_tracker_client
 
 #brokerages defined to be used by the application
 brokerages = [
@@ -452,4 +453,5 @@ def api_analyze():
 port = int(os.getenv('VCAP_APP_PORT', 8080))
 host='0.0.0.0'
 if __name__ == "__main__":
+	metrics_tracker_client.track()
 	app.run(host='0.0.0.0', port=int(port))
