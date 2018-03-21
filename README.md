@@ -2,13 +2,13 @@
 
 # Integrate an Investment Portfolio
 
-In this developer journey, we will integrate a user's brokerage portfolio (e.g. e*Trade, charles schwab, Fidelity) with IBM's Investment Portfolio service.  The integration will use Quovo's Aggregation API to aggregate user's portfolio account and post it to the Investment Portfolio service. The steps to perform the integration will be done using Jupyter Notebook with Python scripts. The IBM Data Science Experience provides a great place to work with notebooks, in addition to other data analytical tools and services.  In this journey, we will use IBM Data Science Experience for walking through steps in our notebook.  In addition, the steps have been put together to create a web application that performs the integration of user's brokerage portfolio data with Investment Portfolio service.
+In this developer journey, we will integrate a user's brokerage portfolio (e.g. e*Trade, charles schwab, Fidelity) with IBM's Investment Portfolio service.  The integration will use Quovo's Aggregation API to aggregate user's portfolio account and post it to the Investment Portfolio service. The steps to perform the integration will be done using Jupyter Notebook with Python scripts. The IBM Watson Studio provides a great place to work with notebooks, in addition to other data analytical tools and services.  In this journey, we will use IBM Watson Studio for walking through steps in our notebook.  In addition, the steps have been put together to create a web application that performs the integration of user's brokerage portfolio data with Investment Portfolio service.
 
 When the reader has completed this journey, they will understand how to:
 
 * Retrieve portfolio information and positions from a brokerage account using Quovo
 * Load Investment Portfolio service with portfolio and holdings
-* Use IBM Data Science Experience to open and run cells in notebook
+* Use IBM Watson Studio to open and run cells in notebook
 
 
 # Architecture Flow
@@ -17,7 +17,7 @@ When the reader has completed this journey, they will understand how to:
   <img width="650" height="400" src="images\arch_flow.png">
 </p>
 
-1. The user logs into IBM Data Science Experience
+1. The user logs into IBM Watson Studio
 2. The user creates a project and opens the notebook
 3. The initial steps walk through retrieving brokerage portfolio account info using Quovo Aggregation API
 4. The next steps loads the portfolio and associated holdings into the Investment Portfolio service
@@ -26,7 +26,7 @@ When the reader has completed this journey, they will understand how to:
 ## Included Components
 + [Bluemix Investment Portfolio](https://console.bluemix.net/apidocs/751-investment-portfolio)
 + [Quovo's Aggregation API service](https://api.quovo.com/docs/agg/)
-+ [IBM Data Science Experience](https://www.ibm.com/bs-en/marketplace/data-science-experience)
++ [IBM Watson Studio](https://www.ibm.com/bs-en/marketplace/data-science-experience)
 
 
 ## Featured technologies
@@ -40,7 +40,7 @@ Follow these steps to setup and run this developer journey. The steps are descri
 ## Steps
 1. [Create Quovo account](#1-create-quovo-account)
 2. [Create Investment Portfolio service](#2-create-investment-portfolio-service)
-3. [Sign up for the Data Science Experience](#3-sign-up-for-the-data-science-experience)
+3. [Sign up for the Watson Studio](#3-sign-up-for-the-data-science-experience)
 4. [Open the SetupPortfolio Notebook](#4-open-the-setupportfolio-notebook)
 5. [Add Credentials](#5-add-credentials)
 6. [Walk through steps to integrate portfolio with Investment Portfolio](#6-walk-through-steps-to-integrate-portfolio-with-investment-portfolio)
@@ -60,9 +60,9 @@ Create the following service:
 
 * [**Investment Portfolio**](https://console.ng.bluemix.net/catalog/services/investment-portfolio)
 
-## 3. Sign up for the Data Science Experience
+## 3. Sign up for the Watson Studio
 
-Sign up for [IBM's Data Science Experience](https://datascience.ibm.com/).
+Sign up for [IBM's Watson Studio](https://datascience.ibm.com/).
 
 <p align="left">
   <img width="1000"  src="images\ibm_dsx_signup_scrnshot.png">
@@ -80,7 +80,7 @@ __Create a Project:__
   <img width="1000" src="images\get_started_scrnshot.png">
 </p>
 
-* In the 'Create new project' window, enter a ``Name`` and, optionally, a ``Description``. By signing up for the IBM Data Science Experience, an Apache Spark service and an Object Storage will be created in your Bluemix account. These services can be integrated with Notebook or Rstudio for data analysis using IBM Data Science Experience. Here, choose the default ``Spark Service`` and ``Storage Type``.
+* In the 'Create new project' window, enter a ``Name`` and, optionally, a ``Description``. By signing up for the IBM Watson Studio, an Apache Spark service and an Object Storage will be created in your Bluemix account. These services can be integrated with Notebook or Rstudio for data analysis using IBM Watson Studio. Here, choose the default ``Spark Service`` and ``Storage Type``.
 <p align="left">
   <img width="600" src="images\create_project_scrnshot.png">
 </p>
@@ -94,7 +94,7 @@ __Create Notebook:__
   <img width="1000"  src="images\add_notebook_scrnshot.png">
 </p>
 
-* With IBM Data Science Experience, you can start with a ``Blank`` notebook or open ``From File``. We will import the notebook from github, so will use ``From URL``.  Click the tab for ``From URL``. Enter a ``Name`` and an optional ``Description``.
+* With IBM Watson Studio, you can start with a ``Blank`` notebook or open ``From File``. We will import the notebook from github, so will use ``From URL``.  Click the tab for ``From URL``. Enter a ``Name`` and an optional ``Description``.
 * In the ``Notebook URL`` box put:
 `` https://github.com/IBM/Integrate-Investment-Portfolio/blob/master/notebooks/SetupPortfolio.ipynb``
 
@@ -102,7 +102,7 @@ __Create Notebook:__
   <img width="500"  src="images\create_notebook_scrnshot.png">
 </p>
 
-* Click ``Create Notebook``. This should open the notebook in your IBM Data Science Experience.
+* Click ``Create Notebook``. This should open the notebook in your IBM Watson Studio.
 
 <p align="left">
   <img width="1000"  src="images\open_notebook_scrnshot.png">
