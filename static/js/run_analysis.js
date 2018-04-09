@@ -15,12 +15,6 @@ $('.integrate.Button').click(function(){
         var formQuovoUsername = $('.quovo_username input').val();
         var formQuovoPassword = $('.quovo_password input').val();
 
-        //console.log("formBrokerage: " + formBrokerageID);
-        //console.log("formBrokerageUsername: " + formBrokerageUsername);
-        //console.log("formBrokeragePassword: " + formBrokeragePassword);
-        //console.log("formQuovoUsername: " + formQuovoUsername);
-        //console.log("formQuovoPassword: " + formQuovoPassword);
-
         //verify input otherwise display an informative message
         if(formBrokerage.includes('Loading...')) {
           alert("Choose a broker first");
@@ -53,11 +47,8 @@ function Process(formBrokerageID, formBrokerageUsername, formBrokeragePassword, 
       $('.loader').addClass('active');
 
       //create json data
-      //var run_data = '{' + '"brokerageID" : ' + formBrokerageID + ', ' + '"brokerageUsername" : "' + formBrokerageUsername + '", ' + '"brokeragePassword" : "' + formBrokeragePassword + '", ' + '"quovoUsername" : "' + formQuovoUsername + '", ' + '"quovoPassword" : "' + formQuovoPassword +'"}';
-
-      console.log("run data: ");
-      console.log(run_data)
-
+      var run_data = '{' + '"brokerageID" : ' + formBrokerageID + ', ' + '"brokerageUsername" : "' + formBrokerageUsername + '", ' + '"brokeragePassword" : "' + formBrokeragePassword + '", ' + '"quovoUsername" : "' + formQuovoUsername + '", ' + '"quovoPassword" : "' + formQuovoPassword +'"}';
+      
       //make ajax call to run services and populate table
       $.ajax({
       type: 'POST',
