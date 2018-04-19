@@ -4,7 +4,7 @@
 
 > Data Science Experience is now Watson Studio. Although some images in this code pattern may show the service as Data Science Experience, the steps and processes will still work.
 
-In this code pattern, we will integrate a user's brokerage portfolio (e.g. eTrade, charles schwab, Fidelity) with IBM's Investment Portfolio service.  The integration will use Quovo's Aggregation API to aggregate user's portfolio account and post it to the Investment Portfolio service. The steps to perform the integration will be done using Jupyter Notebook with Python scripts. The IBM Watson Studio provides a great place to work with notebooks, in addition to other data analytical tools and services. In this code pattern, we will use IBM Watson Studio for walking through steps in our notebook.  In addition, the steps have been put together to create a web application that performs the integration of user's brokerage portfolio data with Investment Portfolio service.
+In this code pattern, we will integrate a user's brokerage portfolio (e.g. eTrade, charles schwab, Fidelity) with IBM's Investment Portfolio service.  The integration will use Quovo's Aggregation API to aggregate user's portfolio account and post it to the Investment Portfolio service. The steps to perform the integration will be done using Jupyter Notebook with Python scripts. The IBM Watson Studio provides a great place to work with notebooks, in addition to other data analytical tools and services. In this code pattern, we will use IBM Watson Studio for walking through steps in our notebook.  In addition, the steps have been put together to create a web application that performs the integration of user's brokerage portfolio data with Investment Portfolio service.  This pattern is targeted at an intermediate developer.
 
 When the reader has completed this code pattern, they will understand how to:
 
@@ -24,7 +24,9 @@ When the reader has completed this code pattern, they will understand how to:
 ## Included Components
 + [Investment Portfolio](https://console.bluemix.net/apidocs/751-investment-portfolio)
 + [Quovo's Aggregation API service](https://api.quovo.com/docs/agg/)
-+ [IBM Watson Studio](https://www.ibm.com/bs-en/marketplace/data-science-experience)
++ [IBM Watson Studio](https://dataplatform.ibm.com)
+
+**Note:** these services are free for those who have a Lite account
 
 ## Featured technologies
 + [Jupyter Notebook](http://jupyter.org/)
@@ -53,6 +55,20 @@ Create a [Quovo account](https://www.quovo.com/pricing/).  A Sandbox account can
 Create the following service:
 
 * [**Investment Portfolio**](https://console.ng.bluemix.net/catalog/services/investment-portfolio)
+
+1. Go to [IBM Cloud](https://www.ibm.com/cloud/). Login or sign up if you don't have an account
+2. Select Catalog (on upper right-hand navigation)
+   ![](images/catalog.png)
+3. Select All Categories
+   ![](images/allcategories.png)
+4. Scroll to the bottom of the screen and click on Experimental Services
+   ![](images/expservices.png)
+5. Scroll down to the `Finance` section and select the service: Investment Portfolio
+   ![](images/investport.png)
+6. Select `Create` (lower right hand side)
+   ![](images/createservice.png)
+
+
 
 ## 3. Sign up for the Watson Studio
 
@@ -126,7 +142,7 @@ You can run a web application using the steps from the notebook to capture portf
 
 Deploy the web application. This will create an Investment Portfolio service for you.
 
-[![Deploy to Bluemix](https://metrics-tracker.mybluemix.net/stats/afef6278be1bd0007fded450dc3ae2c7/button.svg)](https://bluemix.net/deploy?repository=https://github.com/IBM/Integrate-Investment-Portfolio)
+[![Deploy to IBM Cloud](https://metrics-tracker.mybluemix.net/stats/afef6278be1bd0007fded450dc3ae2c7/button.svg)](https://bluemix.net/deploy?repository=https://github.com/IBM/Integrate-Investment-Portfolio)
 
 ### Run it locally
 
