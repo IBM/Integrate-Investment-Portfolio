@@ -1,8 +1,0 @@
-id: Integrate-Investment-Portfolio
-event_id: web
-event_organizer: dev-journeys
-runtimes: 
-  - Data Science Experience
-  - Cloud Foundry
-services: 
-  - Investment Portfolio
