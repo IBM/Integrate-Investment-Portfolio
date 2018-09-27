@@ -1,0 +1,48 @@
+{
+    "name": "Integrate an Investment Portfolio",
+    "description": "Retrieve portfolios and holdings from financial institutions using the Quovo Aggregation API and then load that data into the Investment Portfolio service.",
+    "thumbnailURL": "blueprint/thumbnail.svg",
+    "appIconURL": "blueprint/appicon.svg",
+    "type": "WEB",
+    "tags": [
+        "devex"
+    ],
+    "demoURL": "https://integrate-investment-portfolio.mybluemix.net",
+    "generators": {
+        "python": [
+            "generator-starterkit-content-downloader",
+            "generator-ibm-cloud-enablement",
+            "generator-ibm-service-enablement",
+            "generator-git-starterkit-credentials-builder"
+        ]
+    },
+    "generatorOptions": {
+        "generator-git-starterkit-credentials-builder": {
+            "version": "0.x.x",
+            "scope": "@arf"
+        },
+        "generator-ibm-cloud-enablement": {
+            "version": "1.0.x",
+            "options": {
+                "port": "3000"
+            }
+        },
+        "generator-ibm-service-enablement": {
+            "version": "2.3.x"
+        },
+        "generator-starterkit-content-downloader": {
+            "version": "0.x.x",
+            "scope": "@arf"
+        }
+    },
+    "requiredCapabilities": [
+        "investmentPortfolio"
+    ],
+    "requiredCapabilitiesURLs": {
+        "investmentPortfolio": "https://console.bluemix.net/docs/services/InvestmentPortfolio"
+    },
+    "servicePlans": {
+        "investmentPortfolio": "fss-portfolio-service-free-plan"
+    },
+    "email": "cloud@us.ibm.com"
+}
