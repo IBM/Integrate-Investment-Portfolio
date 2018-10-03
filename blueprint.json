@@ -7,7 +7,7 @@
     "tags": [
         "devex"
     ],
-    "demoURL": "http://integrate-investment-portfolio.mybluemix.net/",
+    "demoURL": "https://integrate-investment-portfolio.mybluemix.net/",
     "generators": {
         "python": [
             "generator-starterkit-content-downloader",
