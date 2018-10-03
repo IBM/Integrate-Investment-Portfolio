@@ -7,7 +7,7 @@
     "tags": [
         "devex"
     ],
-    "demoURL": "https://portfolio-compute.mybluemix.net/",
+    "demoURL": "http://integrate-investment-portfolio.mybluemix.net/",
     "generators": {
         "python": [
             "generator-starterkit-content-downloader",
@@ -34,7 +34,7 @@
         "generator-ibm-service-enablement": {
           "version": "2.4.x"
         }
-    },    
+    },
     "requiredCapabilities": [
         "investmentPortfolio"
     ],
