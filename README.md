@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.com/IBM/Integrate-Investment-Portfolio.svg?branch=master)](https://travis-ci.com/IBM/Integrate-Investment-Portfolio)
 # Integrate an Investment Portfolio
 
 > Data Science Experience is now Watson Studio. Although some images in this code pattern may show the service as Data Science Experience, the steps and processes will still work.
