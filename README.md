@@ -21,14 +21,14 @@ When the reader has completed this code pattern, they will understand how to:
 4. The next steps loads the portfolio and associated holdings into the Investment Portfolio service
 
 ## Included Components
-+ [Investment Portfolio](https://console.bluemix.net/apidocs/751-investment-portfolio)
-+ [Quovo's Aggregation API service](https://api.quovo.com/docs/agg/)
-+ [IBM Watson Studio](https://dataplatform.ibm.com)
++ [Investment Portfolio](https://cloud.ibm.com/apidocs/751-investment-portfolio)
++ [Quovo's Aggregation API service](https://api-docs.quovo.com)
++ [IBM Watson Studio](https://dataplatform.cloud.ibm.com/)
 
 **Note:** these services are free for those who have a Lite account
 
 ## Featured technologies
-+ [Jupyter Notebook](http://jupyter.org/)
++ [Jupyter Notebook](https://jupyter.org/)
 + [Python](https://www.python.org/downloads/)
 
 # Running the Application
@@ -53,7 +53,7 @@ Create a [Quovo account](https://www.quovo.com/pricing/).  A Sandbox account can
 
 Create the following service:
 
-* [**Investment Portfolio**](https://console.ng.bluemix.net/catalog/services/investment-portfolio)
+* [**Investment Portfolio**](https://cloud.ibm.com/catalog/services/investment-portfolio)
 
 1. Go to [IBM Cloud](https://www.ibm.com/cloud/). Login or sign up if you don't have an account
 2. Select Catalog (on upper right-hand navigation)
@@ -71,7 +71,7 @@ Create the following service:
 
 ## 3. Sign up for the Watson Studio
 
-Sign up for IBM's [Watson Studio](https://dataplatform.ibm.com). By creating a project in Watson Studio a free tier ``Object Storage`` service will be created in your IBM Cloud account. Take note of your service names as you will need to select them in the following steps.
+Sign up for IBM's [Watson Studio](https://dataplatform.cloud.ibm.com/). By creating a project in Watson Studio a free tier ``Object Storage`` service will be created in your IBM Cloud account. Take note of your service names as you will need to select them in the following steps.
 
 > Note: When creating your Object Storage service, select the ``Free`` storage type in order to avoid having to pay an upgrade fee.
 
@@ -86,7 +86,7 @@ __Create a Project:__
 
 ![](images/get_started_scrnshot.png)
 
-* In the 'Create new project' window, enter a ``Name`` and, optionally, a ``Description``. 
+* In the 'Create new project' window, enter a ``Name`` and, optionally, a ``Description``.
 
 ![](images/create_project_scrnshot.png)
 
@@ -113,7 +113,7 @@ https://github.com/IBM/Integrate-Investment-Portfolio/blob/master/notebooks/Setu
 
 ## 5. Add Credentials
 
-Once the notebook opens, you will need to add: credentials for the Investment Portfolio service, your Quovo login information and your brokerage info.  
+Once the notebook opens, you will need to add: credentials for the Investment Portfolio service, your Quovo login information and your brokerage info.
 
 In the `Enter Credentials` cell, enter your:
   * Quovo account information
@@ -141,7 +141,7 @@ You can run a web application using the steps from the notebook to capture portf
 
 Deploy the web application. This will create an Investment Portfolio service for you.
 
-[![Deploy to IBM Cloud](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/IBM/Integrate-Investment-Portfolio)
+[![Deploy to IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://github.com/IBM/Integrate-Investment-Portfolio)
 
 ### Run it locally
 
@@ -150,7 +150,7 @@ Deploy the web application. This will create an Investment Portfolio service for
 Clone the Integrate-Investment-Portfolio code locally. In a terminal, run:
 
 ```
-git clone https://github.com/IBM/Integrate-Investment-Portfolio.git
+git clone https://github.com/IBM/Integrate-Investment-Portfolio
 ```
 
 #### Configure .env file
@@ -188,6 +188,6 @@ Go ahead and integrate your portfolio with IBM's Investment Portfolio!
 
 # License
 
-This code pattern is licensed under the Apache Software License, Version 2.  Separate third party code objects invoked within this code pattern are licensed by their respective providers pursuant to their own separate licenses. Contributions are subject to the [Developer Certificate of Origin, Version 1.1 (DCO)](https://developercertificate.org/) and the [Apache Software License, Version 2](http://www.apache.org/licenses/LICENSE-2.0.txt).
+This code pattern is licensed under the Apache Software License, Version 2.  Separate third party code objects invoked within this code pattern are licensed by their respective providers pursuant to their own separate licenses. Contributions are subject to the [Developer Certificate of Origin, Version 1.1 (DCO)](https://developercertificate.org/) and the [Apache Software License, Version 2](https://www.apache.org/licenses/LICENSE-2.0.txt).
 
-[Apache Software License (ASL) FAQ](http://www.apache.org/foundation/license-faq.html#WhatDoesItMEAN)
+[Apache Software License (ASL) FAQ](https://www.apache.org/foundation/license-faq.html#WhatDoesItMEAN)
