@@ -1,10 +1,10 @@
 declared-services:
-  Investment-Portfolio:
+  iip-investment-portfolio:
       label: fss-portfolio-service
       plan: fss-portfolio-service-free-plan
 applications:
 - services:
-   - Investment-Portfolio
+   - iip-investment-portfolio
   memory: 128M
   path: .
   domain: mybluemix.net
